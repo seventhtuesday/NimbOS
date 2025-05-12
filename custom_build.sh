@@ -14,7 +14,7 @@ sed -i 's/NAME="Arch Linux"/NAME="Nimbus OS"/' $airootfs/os-release
 # Wheel Group
 mkdir -p "$airootfs/sudoers.d"
 g_wheel=($airootfs/sudoers.d/q_wheel)
-echo "%wheel ALL=(ALL:ALL) ALL" > %q_wheel
+echo "%wheel ALL=(ALL:ALL) ALL" > $q_wheel
 
 # Sym Links
 ## NetworkManager
@@ -90,5 +90,5 @@ fi
 
 # EFI Loader
 efiloader=(efiboot/loader)
-sed -i 's/Arch/NimbOS/' $efiloader/entries/01-archiso-x86_64-linux.conf
-sed -i 's/Arch/NimbOS/' $efiloader/entries/02-archiso-x86_64-speech-linux.conf
+sed -i 's/Arch/NimbOS/' $efiloader/entries/01-archiso-x86_64-linux-lts.conf
+sed -i 's/Arch/NimbOS/' $efiloader/entries/02-archiso-x86_64-speech-linux-lts.conf
