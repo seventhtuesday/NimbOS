@@ -178,7 +178,7 @@ ark
 partitionmanager
 
 # Desktop Enviroment
-plasma-desktop
+plasma
 sddm
 
 # Calamares
